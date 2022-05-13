@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.logo {
+    font-family: "Dancing Script";
+    /* font-size: 1.6rem; */
+    color: rgb(3, 123, 252);
+  }
