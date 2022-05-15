@@ -189,7 +189,7 @@ console.log('cookie', cookie)
                   CSÁRDÁS
                 </div>
                 <div 
-                  classname={style.mobile_menu_item}
+                  className={style.mobile_menu_item}
                   onClick={() => {
                   router.push(`/tango`);
                   setNavbarVisible(!navbarVisible);
@@ -199,7 +199,7 @@ console.log('cookie', cookie)
                   TANGÓ
               </div>
               <div 
-                classname={style.mobile_menu_item}
+                className={style.mobile_menu_item}
                 onClick={() => {
                   router.push(`/valcer`);
                   setNavbarVisible(!navbarVisible);
@@ -208,7 +208,7 @@ console.log('cookie', cookie)
                   KERINGŐ
               </div>
               <div 
-                classname={style.mobile_menu_item}
+                className={style.mobile_menu_item}
                 onClick={() => {
                   router.push(`/rock`);
                   setNavbarVisible(!navbarVisible);
@@ -217,7 +217,7 @@ console.log('cookie', cookie)
                   ROCK
               </div>
               <div 
-                classname={style.mobile_menu_item}
+                className={style.mobile_menu_item}
                 onClick={() => {
                   router.push(`/szerb`);
                   setNavbarVisible(!navbarVisible);
@@ -226,7 +226,7 @@ console.log('cookie', cookie)
                   SZERB
               </div>
               <div 
-                classname={style.mobile_menu_item}
+                className={style.mobile_menu_item}
                 onClick={() => {
                   router.push(`/egyeb`);
                   setNavbarVisible(!navbarVisible);
@@ -241,7 +241,9 @@ console.log('cookie', cookie)
                   size="large"
                   onClick={() => {
                     setNavbarVisible(!navbarVisible);
-                    router.push(`/`);
+                    router.push(`/login`);
+                    removeCookie('jwt')
+
                   }
                 }
                 />
