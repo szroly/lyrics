@@ -7,11 +7,11 @@ import axios from "axios";
 
 const Navbar = () => {
   const router = useRouter();
-  const [cookies, setCookie] = useCookies();
+  const [cookie, setCookie, removeCookie] = useCookies();
   const [navbarVisible, setNavbarVisible] = useState(false);
 
- const user = cookies.username;
-
+ const user = cookie.username;
+console.log('cookie', cookie)
 
   return (
     <Segment>
@@ -120,13 +120,14 @@ const Navbar = () => {
   
                       headers: {
                         "Content-Type": "application/json",
-                        Authorization: `Bearer ${cookies.jwt}`,
+                        Authorization: `Bearer ${cookie.jwt}`,
                       }
                       
                     })
                       .then((response) => {
                         if (response.ok) {
                          router.push('/login')
+                         removeCookie('jwt')
                         }
                       })
                       .catch((error) => {

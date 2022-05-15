@@ -20,7 +20,7 @@ const Login = () => {
         username,
         password,
       });
-      // console.log("RESPONSE",response)
+      console.log("RESPONSE",response)
       setCookie("jwt", response.data.token);
       router.push("/csardas");
     } catch (error) {
